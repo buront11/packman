@@ -42,11 +42,8 @@ class Enemy(pygame.sprite.Sprite):
                 max_distance = 0
                 for move, speed in self.move_dict.items():
                     if self.collision(speed[0],speed[1]):
-                        print('yes',end=" ")
                         if self.chase_player(p_x,p_y,speed[0],speed[1]) > max_distance:
-                            print('yes',end=" ")
                             if self.move_reverser(move):
-                                print('yes',end=" ")
                                 next_move = move
                                 max_distance = self.chase_player(p_x,p_y,speed[0],speed[1])
             else:
